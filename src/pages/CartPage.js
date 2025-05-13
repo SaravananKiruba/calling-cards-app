@@ -16,12 +16,11 @@ import {
   Breadcrumb,
   notification
 } from 'antd';
-import { 
-  DeleteOutlined, 
+import {   DeleteOutlined, 
   ShoppingOutlined, 
   RightOutlined, 
   LockOutlined,
-  ShieldOutlined
+  SafetyCertificateOutlined
 } from '@ant-design/icons';
 
 const { Title, Text, Paragraph } = Typography;
@@ -165,10 +164,9 @@ const CartPage = () => {
       ),
     },
   ];
-
   // Mobile view item card
   const renderMobileCartItem = (item) => (
-    <Card key={item.id} className="mb-4">
+    <Card className="mb-4">
       <div className="flex">
         <img 
           src={item.image} 
@@ -246,11 +244,13 @@ const CartPage = () => {
                 pagination={false}
                 className="mb-6"
               />
-            </div>
-
-            {/* Mobile view */}
+            </div>            {/* Mobile view */}
             <div className="md:hidden">
-              {cartItems.map(item => renderMobileCartItem(item))}
+              {cartItems.map(item => (
+                <div key={item.id}>
+                  {renderMobileCartItem(item)}
+                </div>
+              ))}
             </div>
 
             {/* Continue Shopping */}
@@ -341,7 +341,7 @@ const CartPage = () => {
                   <Text className="text-gray-600 text-sm">Secure checkout</Text>
                 </div>
                 <div className="flex items-center">
-                  <ShieldOutlined className="text-gray-600 mr-2" />
+                  <SafetyCertificateOutlined className="text-gray-600 mr-2" />
                   <Text className="text-gray-600 text-sm">100% Money-back guarantee</Text>
                 </div>
               </div>
@@ -365,8 +365,7 @@ const CartPage = () => {
       {cartItems.length > 0 && (
         <div className="mt-12">
           <Title level={3} className="mb-6">Frequently Bought Together</Title>
-          <Row gutter={[16, 16]}>
-            {[1, 2, 3, 4].map(id => (
+          <Row gutter={[16, 16]}>            {[1, 2, 3, 4].map(id => (
               <Col key={id} xs={12} sm={6} md={6}>
                 <Link to={`/products/${id + 10}`}>
                   <Card
@@ -376,17 +375,15 @@ const CartPage = () => {
                   >
                     <Card.Meta 
                       title={`Related Card ${id}`} 
-                      description={
-                        <div className="mt-2">
-                          <div className="text-lg font-bold text-blue-600">
-                            $9.99
-                          </div>
-                          <Button type="primary" size="small" className="mt-2 bg-blue-600 hover:bg-blue-700">
-                            Add to Cart
-                          </Button>
-                        </div>
-                      } 
+                      description="$9.99"
                     />
+                    <Button 
+                      type="primary" 
+                      size="small" 
+                      className="mt-2 bg-blue-600 hover:bg-blue-700"
+                    >
+                      Add to Cart
+                    </Button>
                   </Card>
                 </Link>
               </Col>

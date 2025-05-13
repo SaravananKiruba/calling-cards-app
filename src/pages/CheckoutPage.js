@@ -19,13 +19,12 @@ import {
   Tag,
   Breadcrumb
 } from 'antd';
-import { 
-  UserOutlined, 
+import {   UserOutlined, 
   HomeOutlined, 
   CreditCardOutlined, 
   CheckCircleOutlined,
   LockOutlined,
-  ShieldOutlined
+  SafetyCertificateOutlined
 } from '@ant-design/icons';
 
 const { Title, Text, Paragraph } = Typography;
@@ -594,7 +593,7 @@ const CheckoutPage = () => {
                 </Paragraph>
                 
                 <div className="flex items-center mb-3">
-                  <ShieldOutlined className="text-blue-600 text-lg mr-2" />
+                  <SafetyCertificateOutlined className="text-blue-600 text-lg mr-2" />
                   <Text strong>100% Satisfaction Guarantee</Text>
                 </div>
                 <Paragraph className="text-gray-600 text-sm">

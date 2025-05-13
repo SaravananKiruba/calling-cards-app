@@ -9,13 +9,11 @@ import {
   Typography, 
   Carousel, 
   Tabs, 
-  InputNumber, 
-  Rate, 
+  InputNumber,   Rate, 
   Divider,
   Tag,
   List,
   Avatar,
-  Comment,
   Form,
   Input
 } from 'antd';
@@ -30,6 +28,7 @@ import {
   DollarOutlined,
   StarFilled
 } from '@ant-design/icons';
+import Comment from '../components/common/Comment';
 
 const { Title, Paragraph, Text } = Typography;
 const { TabPane } = Tabs;
@@ -99,20 +98,18 @@ const ProductDetailPage = () => {
         date: '2023-05-15',
         rating: 5,
         content: 'Excellent service! The call quality is crystal clear and the rates are very competitive. I use this card every week to call my family in Mexico City.'
-      },
-      {
+      },      {
         author: 'Maria L.',
         avatar: 'https://via.placeholder.com/50x50',
         date: '2023-04-22',
         rating: 4,
-        content: 'Good value for the price. I appreciate that there are no hidden fees. The only reason I'm not giving 5 stars is because the mobile rates could be a bit lower.'
-      },
-      {
+        content: "Good value for the price. I appreciate that there are no hidden fees. The only reason I'm not giving 5 stars is because the mobile rates could be a bit lower."
+      },      {
         author: 'Juan C.',
         avatar: 'https://via.placeholder.com/50x50',
         date: '2023-03-10',
         rating: 5,
-        content: 'This is my go-to calling card for reaching my relatives in Guadalajara. I've been using it for over a year and never had any issues with connection or call quality.'
+        content: "This is my go-to calling card for reaching my relatives in Guadalajara. I've been using it for over a year and never had any issues with connection or call quality."
       }
     ]
   };
