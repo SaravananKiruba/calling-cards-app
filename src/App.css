@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+/* Custom styles for CallingCards.com */
+
+/* Ant Design component overrides */
+.ant-btn-primary {
+  background-color: #1890ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #096dd9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Card hover effects */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+/* Product image gallery */
+.product-carousel .slick-dots li button {
+  background: #1890ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-carousel .slick-dots li.slick-active button {
+  background: #096dd9;
+}
+
+/* Hero carousel */
+.ant-carousel .slick-dots li button {
+  background: #fff;
+  opacity: 0.7;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  opacity: 1;
+  background: #fff;
+}
+
+/* Cart table */
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background-color: rgba(24, 144, 255, 0.05);
+}
+
+/* Form styles */
+.ant-form-item-label > label {
+  font-weight: 500;
+}
+
+/* Global styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  color: #333;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+a {
+  color: #1890ff;
+  text-decoration: none;
 }
