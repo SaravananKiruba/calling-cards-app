@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/calling-cards-app/static/css/main.b0e42cbd.css",
+    "main.js": "/calling-cards-app/static/js/main.e8efd80b.js",
+    "static/js/453.f8687109.chunk.js": "/calling-cards-app/static/js/453.f8687109.chunk.js",
+    "index.html": "/calling-cards-app/index.html",
+    "main.b0e42cbd.css.map": "/calling-cards-app/static/css/main.b0e42cbd.css.map",
+    "main.e8efd80b.js.map": "/calling-cards-app/static/js/main.e8efd80b.js.map",
+    "453.f8687109.chunk.js.map": "/calling-cards-app/static/js/453.f8687109.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0e42cbd.css",
+    "static/js/main.e8efd80b.js"
+  ]
+}
